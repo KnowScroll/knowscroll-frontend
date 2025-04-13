@@ -1,19 +1,26 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+import './globals.css';
+import { Inter } from 'next/font/google';
+import Navbar from '@/app/components/navigation/Navbar';
+import { ThemeProvider } from '@/providers/ThemeProvider';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Gradient Background App',
-  description: 'Next.js app with black background and color gradients',
-}
+  title: 'Know Scroll',
+  description: 'hehe! you are at the right place',
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} gradient-background`}>
-        {children}
+        <ThemeProvider>
+          <Navbar />
+          <main className="pt-16">
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }

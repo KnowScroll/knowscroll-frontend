@@ -1,0 +1,38 @@
+.navbar {
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+  }
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logoCircle {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+  
+  .brandText {
+    color: white;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  
+  .iconsContainer {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .iconButton {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+  }
