@@ -1,7 +1,9 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
 import Navbar from '@/app/components/navigation/Navbar';
+import BottomNav from './components/navigation/BottomNav';
 import { ThemeProvider } from '@/providers/ThemeProvider';
+import ClientOnly from './components/ClientOnly';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -13,12 +15,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} gradient-background`}>
+      <body 
+        className={`${inter.className} gradient-background`}
+      >
         <ThemeProvider>
-          <Navbar />
-          <main className="pt-16">
-            {children}
+          <ClientOnly>
+            <Navbar />
+          </ClientOnly>
+          <main className="pt-16 pb-20">
+            <>
+              {children}
+            </>
           </main>
+          <ClientOnly>
+            <BottomNav />
+          </ClientOnly>
         </ThemeProvider>
       </body>
     </html>

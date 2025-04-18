@@ -1,19 +1,19 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata = {
-  title: 'Gradient Background App',
-  description: 'Next.js app with black background and color gradients',
-}
-
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body className={`${inter.className} gradient-background`}>
-        {children}
-      </body>
-    </html>
-  )
-}
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+    content: [
+      './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+      './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+      './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+      './src/app/(auth)/*.{js,ts,jsx,tsx,mdx}',
+    ],
+    theme: {
+      extend: {
+        colors: {
+          'gradient-gold': 'var(--color-gradient-gold)',
+          'gradient-purple': 'var(--color-gradient-purple)',
+          'gradient-blue': 'var(--color-gradient-blue)',
+        },
+      },
+    },
+    plugins: [],
+  }
