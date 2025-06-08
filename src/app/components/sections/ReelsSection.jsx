@@ -1,7 +1,7 @@
 'use client';
 
 import ReelsDeck from '../ReelsDeck';
-
+import { TrendingUp, ArrowRight } from 'lucide-react';
 // Sample data for reels
 const sampleReels = [
   {
@@ -65,10 +65,44 @@ const sampleReels = [
     color: 'from-orange-600 to-yellow-600'
   }
 ];
+const handleViewAll = () => {
+  // Handle view all action
+  console.log('View all trending cards');
+};
 
 export default function ReelsSection() {
   return (
     <section className="relative py-16 px-4">
+      {/* ReelsDeckHeader */}
+      <div className="text-center mb-8">
+        <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+          Pick a card to
+          <br />
+          play
+        </h1>
+      </div>
+
+      {/* Trending Section */}
+      <div className="flex items-center justify-between">
+        {/* Left side - Trending Today */}
+        <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center w-8 h-8">
+            <TrendingUp className="w-6 h-6 text-white" />
+          </div>
+          <span className="text-white font-medium text-lg">
+            Trending Today
+          </span>
+        </div>
+
+        {/* Right side - View All */}
+        <button 
+          onClick={handleViewAll}
+          className="flex items-center gap-2 text-white hover:text-gray-300 transition-colors duration-200"
+        >
+          <span className="font-medium">View All</span>
+          <ArrowRight className="w-5 h-5" />
+        </button>
+      </div>
       {/* ReelsDeck Component */}
       <div className="max-w-6xl mx-auto">
         <ReelsDeck reels={sampleReels} initialIndex={0} />
