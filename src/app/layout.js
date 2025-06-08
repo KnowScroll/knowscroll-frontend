@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       >
         <ThemeProvider>
           <ClientOnly>
-            <Navbar />
+            {/* <Navbar /> */}
           </ClientOnly>
           <main className="pt-16 pb-20">
             <>
