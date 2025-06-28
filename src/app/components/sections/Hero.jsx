@@ -18,7 +18,7 @@ export default function Hero() {
         </div>
 
         {/* Explore Shorts Section */}
-        <ExploreSection />
+        <ExploreSection heading="Expolore"/>
       </div>
     </section>
   );

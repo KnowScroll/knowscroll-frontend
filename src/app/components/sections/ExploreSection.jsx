@@ -3,7 +3,7 @@
 import { Zap, ArrowRight } from 'lucide-react';
 import ReelCard from './ReelCard';
 
-export default function ExploreSection() {
+export default function ExploreSection({heading , reelsData}) {
   // Sample data for reels - you can replace this with actual data
   const reels = [
     {
@@ -53,7 +53,7 @@ export default function ExploreSection() {
             <Zap className="w-6 h-6 text-black" />
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-white">
-            Shorts
+            {heading || "Explore Shorts"}
           </h2>
         </div>
         

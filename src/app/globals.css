@@ -61,3 +61,64 @@ body {
   filter: blur(var(--gradient-blur));
   z-index: -1;
 }
+
+/* Add these animations to your globals.css file */
+
+@keyframes glow {
+  0%, 100% { 
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes connectionPulse {
+  0%, 100% { 
+    opacity: 0.4;
+    box-shadow: 0 0 10px rgba(96, 175, 249, 0.4);
+  }
+  50% { 
+    opacity: 0.8;
+    box-shadow: 0 0 20px rgba(96, 175, 249, 0.8);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% { 
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  50% { 
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Smooth animations for better performance */
+.learning-universe * {
+  will-change: transform, opacity;
+}
+
+/* Custom scrollbar for mobile (optional) */
+.learning-universe::-webkit-scrollbar {
+  display: none;
+}
+
+.learning-universe {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
