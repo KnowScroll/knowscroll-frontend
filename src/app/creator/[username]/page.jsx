@@ -6,6 +6,8 @@ import { notFound } from 'next/navigation';
 import { CreatorProfile, CreatorHeader } from '../index';
 import { isValidUsername } from '@/app/utils/creatorUtils';
 import Navbar from '@/app/components/navigation/Navbar';
+import { UploadedShorts } from '@/app/components/sections';
+
 
 // Dummy data - replace with API call in the future
 const getDummyCreatorData = (username) => {
@@ -83,8 +85,11 @@ export default function CreatorPage({ params }) {
       {/* <CreatorHeader creatorName={creatorData.displayName} />
        */}
        <Navbar/>
-      <div className="pt-16"> {/* Account for fixed header */}
+      <div > {/* Account for fixed header */}
         <CreatorProfile creator={creatorData} />
+      </div>
+      <div className="px-2"> 
+        <UploadedShorts />
       </div>
     </div>
   );
