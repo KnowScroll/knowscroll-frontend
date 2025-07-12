@@ -12,10 +12,10 @@ import { UploadedShorts } from '@/app/components/sections';
 // Dummy data - replace with API call in the future
 const getDummyCreatorData = (username) => {
   const creators = {
-    'grind-hallo': {
+    'mrigu': {
       id: 1,
-      username: 'grind-hallo',
-      displayName: 'Grind Hallo',
+      username: 'Mrigesh The Legend',
+      displayName: 'Chota NUNU',
       bio: '# Art Based Creator',
       profileImage: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
       backgroundImage: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=600&fit=crop',
@@ -28,7 +28,7 @@ const getDummyCreatorData = (username) => {
       isFollowing: false,
       joinedDate: '2023-05-15'
     },
-    'tech-guru': {
+    'Shivalik': {
       id: 2,
       username: 'tech-guru',
       displayName: 'Tech Guru',
@@ -44,10 +44,10 @@ const getDummyCreatorData = (username) => {
       isFollowing: true,
       joinedDate: '2022-11-20'
     },
-    'creative-soul': {
+    'Asrani': {
       id: 3,
-      username: 'creative-soul',
-      displayName: 'Creative Soul',
+      username: 'HEHEEEEE',
+      displayName: 'Artist Hu broo',
       bio: '# Digital Artist & Designer',
       profileImage: 'https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=150&h=150&fit=crop&crop=face',
       backgroundImage: 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400&h=600&fit=crop',

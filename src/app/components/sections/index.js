@@ -4,3 +4,6 @@ export { default as ReelCard } from './ReelCard';
 export { default as ReelsSection } from './ReelsSection';
 export { default as LearningUniverse } from '../profile/LearningUniverse';
 export {default as UploadedShorts} from './UploadedShorts';
+
+export { default as ReelsForYou } from './ReelsForYou';
+export { default as MustWatchPlaylists } from './MustWatchPlaylists';

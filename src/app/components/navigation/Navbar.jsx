@@ -1,9 +1,16 @@
 'use client';
 
 import { Bell, Search } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 import Logo from '@/app/ui/Logo';
 
 export default function Navbar() {
+  const router = useRouter();
+
+  const handleSearchClick = () => {
+    router.push('/search');
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 w-full z-50 bg-transparent backdrop-blur-sm border-b border-white/10">
       <div className="container mx-auto">
@@ -21,6 +28,7 @@ export default function Navbar() {
             </button>
             <button 
               aria-label="Search" 
+              onClick={handleSearchClick}
               className="bg-transparent border-none text-white cursor-pointer p-0 hover:opacity-80 transition-opacity"
             >
               <Search className="w-6 h-6" />
